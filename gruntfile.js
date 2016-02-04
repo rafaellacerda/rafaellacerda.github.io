@@ -16,12 +16,22 @@ module.exports = function (grunt) {
                     'css/folha-estilo.css': 'scss/folha_estilo.scss',
                 }
             }
+        },
+        
+        cssmin: {
+            sitecss: {
+                files: {
+                    'css/folha-estilo.min.css': ['css/folha-estilo.css']
+                }
+            }
         }
+
     });
     
     // carrega plugins
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
   
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('build', ['sass', 'cssmin']);
 };
