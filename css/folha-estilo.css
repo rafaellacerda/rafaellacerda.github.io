@@ -2478,12 +2478,13 @@ strong {
     position: relative;
     min-height: 100px;
     text-align: center; }
-    .loves .loves__love:hover {
-      filter: grayscale(0);
-      -webkit-filter: grayscale(0);
-      -moz-filter: grayscale(0);
-      -o-filter: grayscale(0);
-      -ms-filter: grayscale(0); }
+    @media screen and (min-width: 769px) {
+      .loves .loves__love:hover {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0); } }
     .loves .loves__love .icone__love {
       display: table-cell;
       vertical-align: middle; }
@@ -2491,42 +2492,38 @@ strong {
         width: 100px;
         height: 150px; }
 
-.effects__languages, .html, .css, .js, .angular, .sass {
-  -webkit-transition: all ease 0.5s, box-shadow ease 0.5s;
-  -moz-transition: all ease 0.5s, box-shadow ease 0.5s;
-  -ms-transition: all ease 0.5s, box-shadow ease 0.5s;
-  -o-transition: all ease 0.5s, box-shadow ease 0.5s;
-  transition: all ease 0.5s, box-shadow ease 0.5s;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(1);
-  -o-filter: grayscale(1);
-  -ms-filter: grayscale(1); }
-
-.html {
-  box-shadow: inset 0 0 0 #F16529; }
-  .html:hover {
-    box-shadow: inset 0 -250px 0 0 #E44D26, 0 8px 6px -6px #F16529; }
-
-.css {
-  box-shadow: inset 0 0 0 #33A9DC; }
-  .css:hover {
-    box-shadow: inset 0 -250px 0 0 #1572B6, 0 8px 6px -6px #33A9DC; }
-
-.js {
-  box-shadow: inset 0 0 0 #F0DB4F; }
-  .js:hover {
-    box-shadow: inset 0 -250px 0 0 #F0DB4F, 0 8px 6px -6px #F0DB4F; }
-
-.angular {
-  box-shadow: inset 0 0 0 #A6120D; }
-  .angular:hover {
-    box-shadow: inset 0 -250px 0 0 #A6120D, 0 8px 6px -6px #A6120D; }
-
-.sass {
-  box-shadow: inset 0 0 0 #CB6699; }
-  .sass:hover {
-    box-shadow: inset 0 -250px 0 0 rgba(250, 126, 189, 0.94), 0 8px 6px -6px #CB6699; }
+@media screen and (min-width: 769px) {
+  .effects__languages, .html, .css, .js, .angular, .sass {
+    -webkit-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -moz-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -ms-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -o-transition: all ease 0.5s, box-shadow ease 0.5s;
+    transition: all ease 0.5s, box-shadow ease 0.5s;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    -ms-filter: grayscale(1); }
+  .html {
+    box-shadow: inset 0 0 0 #F16529; }
+    .html:hover {
+      box-shadow: inset 0 -250px 0 0 #E44D26, 0 8px 6px -6px #F16529; }
+  .css {
+    box-shadow: inset 0 0 0 #33A9DC; }
+    .css:hover {
+      box-shadow: inset 0 -250px 0 0 #1572B6, 0 8px 6px -6px #33A9DC; }
+  .js {
+    box-shadow: inset 0 0 0 #F0DB4F; }
+    .js:hover {
+      box-shadow: inset 0 -250px 0 0 #F0DB4F, 0 8px 6px -6px #F0DB4F; }
+  .angular {
+    box-shadow: inset 0 0 0 #A6120D; }
+    .angular:hover {
+      box-shadow: inset 0 -250px 0 0 #A6120D, 0 8px 6px -6px #A6120D; }
+  .sass {
+    box-shadow: inset 0 0 0 #CB6699; }
+    .sass:hover {
+      box-shadow: inset 0 -250px 0 0 rgba(250, 126, 189, 0.94), 0 8px 6px -6px #CB6699; } }
 
 .link {
   text-decoration: none;

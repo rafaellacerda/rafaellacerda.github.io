@@ -85,12 +85,14 @@ strong {
         min-height: 100px;
         text-align: center;
 
-        &:hover {
-            filter: grayscale(0);
-            -webkit-filter: grayscale(0);
-            -moz-filter: grayscale(0);
-            -o-filter: grayscale(0);
-            -ms-filter: grayscale(0);
+        @media #{$desktop} {
+            &:hover {
+                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+                -moz-filter: grayscale(0);
+                -o-filter: grayscale(0);
+                -ms-filter: grayscale(0);
+            }
         }
 
         .icone__love {
@@ -105,65 +107,70 @@ strong {
     }
 }
 
-.effects__languages {
-    -webkit-transition: all ease 0.5s, box-shadow ease 0.5s;
-    -moz-transition: all ease 0.5s, box-shadow ease 0.5s;
-    -ms-transition: all ease 0.5s, box-shadow ease 0.5s;
-    -o-transition: all ease 0.5s, box-shadow ease 0.5s;
-    transition: all ease 0.5s, box-shadow ease 0.5s;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-}
 
-@mixin effect__shadow($color, $borderColor) {
-    box-shadow: inset 0 -250px 0 0 $color, 0 8px 6px -6px $borderColor;
-}
 
-.html {
-    box-shadow: inset 0 0 0 $borderHTML;
-    @extend .effects__languages;
+@media #{$desktop} {
 
-    &:hover {
-        @include effect__shadow($colorHTML,$borderHTML);
+    @mixin effect__shadow($color, $borderColor) {
+        box-shadow: inset 0 -250px 0 0 $color, 0 8px 6px -6px $borderColor;
     }
-}
 
-.css {
-    box-shadow: inset 0 0 0 $borderCSS;
-    @extend .effects__languages;
-
-    &:hover {
-        @include effect__shadow($colorCSS,$borderCSS);
+    .effects__languages {
+        -webkit-transition: all ease 0.5s, box-shadow ease 0.5s;
+        -moz-transition: all ease 0.5s, box-shadow ease 0.5s;
+        -ms-transition: all ease 0.5s, box-shadow ease 0.5s;
+        -o-transition: all ease 0.5s, box-shadow ease 0.5s;
+        transition: all ease 0.5s, box-shadow ease 0.5s;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
     }
-}
 
-.js {
-    box-shadow: inset 0 0 0 $colorJS;
-    @extend .effects__languages;
+    .html {
+        box-shadow: inset 0 0 0 $borderHTML;
+        @extend .effects__languages;
 
-    &:hover {
-        @include effect__shadow($colorJS,$colorJS);
+        &:hover {
+            @include effect__shadow($colorHTML,$borderHTML);
+        }
     }
-}
 
-.angular {
-    box-shadow: inset 0 0 0 $colorHeart;
-    @extend .effects__languages;
+    .css {
+        box-shadow: inset 0 0 0 $borderCSS;
+        @extend .effects__languages;
 
-    &:hover {
-        @include effect__shadow($colorHeart,$colorHeart);
+        &:hover {
+            @include effect__shadow($colorCSS,$borderCSS);
+        }
     }
-}
 
-.sass {
-    box-shadow: inset 0 0 0 $borderSass;
-    @extend .effects__languages;
+    .js {
+        box-shadow: inset 0 0 0 $colorJS;
+        @extend .effects__languages;
 
-    &:hover {
-        @include effect__shadow($colorSass,$borderSass);
+        &:hover {
+            @include effect__shadow($colorJS,$colorJS);
+        }
+    }
+
+    .angular {
+        box-shadow: inset 0 0 0 $colorHeart;
+        @extend .effects__languages;
+
+        &:hover {
+            @include effect__shadow($colorHeart,$colorHeart);
+        }
+    }
+
+    .sass {
+        box-shadow: inset 0 0 0 $borderSass;
+        @extend .effects__languages;
+
+        &:hover {
+            @include effect__shadow($colorSass,$borderSass);
+        }
     }
 }
 
@@ -171,8 +178,8 @@ strong {
     text-decoration: none;
     color: $strongColorText;
 
-    &:focus,&:visited{
-        color:$strongColorText;
+    &:focus, &:visited {
+        color: $strongColorText;
     }
 }
 
