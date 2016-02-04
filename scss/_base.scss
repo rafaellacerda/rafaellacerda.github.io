@@ -1,0 +1,197 @@
+﻿@import '_variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color: #636161;
+    font-family: 'Roboto Slab', serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.cell-center {
+    margin: 0 auto;
+}
+
+.cell-scrolling-horizontal {
+    overflow-x: auto;
+}
+
+.cell-scrolling-vertical {
+    overflow-y: auto;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+br {
+    clear: both;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6em;
+    padding-bottom: 1.5em;
+}
+
+@media #{$desktop} {
+
+    @for $i from 1 through 10 {
+        .cell-#{$i*10} {
+            width: 10% * $i;
+        }
+    }
+
+    .cell-33 {
+        width: 33.33333%;
+    }
+
+    .desktop-hidden {
+        display: none;
+    }
+
+    .desktop-cell-center {
+        text-align: center;
+    }
+
+    .desktop-right {
+        float: right;
+    }
+
+    .desktop-bottom {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+@media #{$mobile} {
+
+    .mobile-left {
+        float: left;
+        padding: 0 5px;
+    }
+
+    @for $i from 1 through 10 {
+        .mobile-cell-#{$i*10} {
+            width: 10% * $i;
+        }
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .mobile-cell-center {
+        text-align: center;
+    }
+
+    .mobile-right {
+        float: right;
+    }
+
+    .mobile-bottom {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+@media #{$tablet} {
+
+    .tablet-left {
+        float: left;
+        padding: 0 5px;
+    }
+
+    @for $i from 1 through 10 {
+        .tablet-cell-#{$i*10} {
+            width: 10% * $i;
+        }
+    }
+
+    .tablet-hidden {
+        display: none;
+    }
+
+    .tablet-cell-center {
+        text-align: center;
+    }
+
+    .tablet-right {
+        float: right;
+    }
+
+    .tablet-bottom {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+@media #{$smartphone} {
+
+    .smartphone-left {
+        float: left;
+        padding: 0 5px;
+    }
+
+    @for $i from 1 through 10 {
+        .smartphone-cell-#{$i*10} {
+            width: 10% * $i;
+        }
+    }
+
+    .smartphone-hidden {
+        display: none;
+    }
+
+    .smartphone-cell-center {
+        text-align: center;
+    }
+
+    .smartphone-right {
+        float: right;
+    }
+
+    .smartphone-bottom {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+@for $i from 1 through 10 {
+    .height-#{$i*20} {
+        height: 20px * $i;
+        display: table;
+    }
+
+    .margin-left-#{$i*10} {
+        margin-left: 10px * $i;
+    }
+
+    .margin-right-#{$i*10} {
+        margin-right: 10px * $i;
+    }
+
+    .margin-top-#{$i*10} {
+        margin-top: 10px * $i;
+    }
+
+    .margin-bottom-#{$i*10} {
+        margin-bottom: 10px * $i;
+    }
+}

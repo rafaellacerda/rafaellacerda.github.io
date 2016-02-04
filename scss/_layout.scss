@@ -1,0 +1,241 @@
+﻿@import '_variables.scss';
+@import '_mixins.scss';
+
+::selection {
+    color: $colorSelection;
+}
+
+.title {
+    color: $strongColorText;
+}
+
+strong {
+    color: $strongColorText;
+    font-weight: 800;
+}
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background: url('../images/programming.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    border: 1px solid $strongColorText;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+}
+
+.about {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+
+    @media #{$mobile} {
+        width: 90%;
+    }
+
+    .picture {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        top: -70px;
+
+        .image__thumbnail {
+            width: 190px;
+            border: 10px solid $colorBackground;
+            height: 170px;
+        }
+    }
+}
+
+.coracao {
+    color: $colorHeart;
+    font-size: 20px;
+}
+
+
+.skills {
+    padding-bottom: 20px;
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+.loves {
+    display: table;
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 10px;
+
+    .loves__love {
+        display: table;
+        position: relative;
+        min-height: 100px;
+        text-align: center;
+
+        &:hover {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            -moz-filter: grayscale(0);
+            -o-filter: grayscale(0);
+            -ms-filter: grayscale(0);
+        }
+
+        .icone__love {
+            display: table-cell;
+            vertical-align: middle;
+
+            svg {
+                width: 100px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+.effects__languages {
+    -webkit-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -moz-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -ms-transition: all ease 0.5s, box-shadow ease 0.5s;
+    -o-transition: all ease 0.5s, box-shadow ease 0.5s;
+    transition: all ease 0.5s, box-shadow ease 0.5s;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+}
+
+@mixin effect__shadow($color, $borderColor) {
+    box-shadow: inset 0 -250px 0 0 $color, 0 8px 6px -6px $borderColor;
+}
+
+.html {
+    box-shadow: inset 0 0 0 $borderHTML;
+    @extend .effects__languages;
+
+    &:hover {
+        @include effect__shadow($colorHTML,$borderHTML);
+    }
+}
+
+.css {
+    box-shadow: inset 0 0 0 $borderCSS;
+    @extend .effects__languages;
+
+    &:hover {
+        @include effect__shadow($colorCSS,$borderCSS);
+    }
+}
+
+.js {
+    box-shadow: inset 0 0 0 $colorJS;
+    @extend .effects__languages;
+
+    &:hover {
+        @include effect__shadow($colorJS,$colorJS);
+    }
+}
+
+.angular {
+    box-shadow: inset 0 0 0 $colorHeart;
+    @extend .effects__languages;
+
+    &:hover {
+        @include effect__shadow($colorHeart,$colorHeart);
+    }
+}
+
+.sass {
+    box-shadow: inset 0 0 0 $borderSass;
+    @extend .effects__languages;
+
+    &:hover {
+        @include effect__shadow($colorSass,$borderSass);
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $strongColorText;
+
+    &:focus,&:visited{
+        color:$strongColorText;
+    }
+}
+
+.articles {
+    display: table;
+    position: relative;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    @include element(article) {
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        @include modifier(rounded) {
+            border-radius: 50%;
+        }
+
+        @include element(title) {
+            display: table-cell;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        @include element(subtitle) {
+        }
+
+        @include element(image) {
+        }
+    }
+}
+
+.image__thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.image__thumbnail--rounded {
+    @extend .image-thumbnail;
+    border-radius: 45%;
+}
+
+.footer {
+    position: relative;
+    background: $colorFooter;
+    bottom: 0;
+    width: 100%;
+
+    .contact {
+        padding-top: 25px;
+    }
+}
+
+.fa {
+    font-size: 50px;
+}
