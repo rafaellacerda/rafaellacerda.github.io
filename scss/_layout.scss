@@ -40,6 +40,23 @@ strong {
 
     @media #{$mobile} {
         width: 90%;
+
+        figcaption h2 {
+            font-size: 18px;
+        }
+    }
+
+    h2 {
+        color: #636161;
+        font-family: Consolas, Monaco, monospace;
+        font-weight: bold;
+        border-right: .1em solid;
+        white-space: nowrap;
+        overflow: hidden;
+        -moz-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+        -o-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+        -webkit-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+        animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
     }
 
     .picture {
@@ -59,6 +76,22 @@ strong {
     .contact {
         min-height: 35px;
         padding-top: 5px;
+    }
+
+    .fa-linkedin-square:hover {
+        color: #1c87bd;
+    }
+
+    .fa-facebook-official:hover {
+        color: #44609d;
+    }
+
+    .fa-github:hover {
+        color: #adabab;
+    }
+
+    .fa-medium:hover {
+        color: #00AB82;
     }
 }
 
@@ -267,33 +300,4 @@ strong {
     .fa {
         margin-left: 32px;
     }
-}
-
-h2 {
-    color: #636161;
-    font-family: Consolas, Monaco, monospace;
-    font-weight: bold;
-    border-right: .1em solid;
-    white-space: nowrap;
-    overflow: hidden;
-    -moz-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
-    -o-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
-    -webkit-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
-    animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
-}
-
-.fa-linkedin-square:hover {
-    color: #1c87bd;
-}
-
-.fa-facebook-official:hover {
-    color: #44609d;
-}
-
-.fa-github:hover {
-    color: #adabab;
-}
-
-.fa-medium:hover {
-    color: #00AB82;
 }
