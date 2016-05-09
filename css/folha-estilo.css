@@ -2430,14 +2430,14 @@ strong {
   background: url("../images/programming.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
   border: 1px solid #636161;
-  filter: grayscale(1);
   -webkit-filter: grayscale(1);
   -moz-filter: grayscale(1);
   -o-filter: grayscale(1);
-  -ms-filter: grayscale(1); }
+  -ms-filter: grayscale(1);
+  filter: grayscale(1); }
 
 .about {
   display: block;
@@ -2457,8 +2457,11 @@ strong {
       width: 190px;
       border: 10px solid #FFF;
       height: 170px; }
+  .about .contact {
+    min-height: 35px;
+    padding-top: 5px; }
 
-.coracao {
+.heart {
   color: #A6120D;
   font-size: 20px; }
 
@@ -2573,7 +2576,44 @@ strong {
     padding-top: 25px; }
 
 .fa {
-  font-size: 50px; }
+  font-size: 28px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+
+@media screen and (min-width: 769px) {
+  .fa {
+    margin-left: 55px; } }
+
+@media screen and (max-width: 768px) {
+  .fa {
+    margin-left: 32px; } }
+
+h2 {
+  color: #636161;
+  font-family: Consolas, Monaco, monospace;
+  font-weight: bold;
+  border-right: .1em solid;
+  white-space: nowrap;
+  overflow: hidden;
+  -moz-animation: cursor 0.5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+  -o-animation: cursor 0.5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+  -webkit-animation: cursor 0.5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+  animation: cursor 0.5s step-end infinite alternate, typingRocks 5s steps(25) forwards; }
+
+.fa-linkedin-square:hover {
+  color: #1c87bd; }
+
+.fa-facebook-official:hover {
+  color: #44609d; }
+
+.fa-github:hover {
+  color: #adabab; }
+
+.fa-medium:hover {
+  color: #00AB82; }
 
 .shake {
   display: inline-block;
@@ -2859,3 +2899,27 @@ strong {
     border-color: transparent; }
   50% {
     border-color: #636161; } }
+
+@-moz-keyframes typingRocks {
+  from {
+    width: 0; }
+  to {
+    width: 25ch; } }
+
+@-webkit-keyframes typingRocks {
+  from {
+    width: 0; }
+  to {
+    width: 25ch; } }
+
+@keyframes typingRocks {
+  from {
+    width: 0; }
+  to {
+    width: 25ch; } }
+
+@keyframes cursor {
+  0%, 100% {
+    border-color: currentColor; }
+  50% {
+    border-color: transparent; } }

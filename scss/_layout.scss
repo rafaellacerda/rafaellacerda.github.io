@@ -22,14 +22,14 @@ strong {
     background: url('../images/programming.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
     border: 1px solid $strongColorText;
-    filter: grayscale(1);
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
     -o-filter: grayscale(1);
     -ms-filter: grayscale(1);
+    filter: grayscale(1);
 }
 
 .about {
@@ -55,9 +55,14 @@ strong {
             height: 170px;
         }
     }
+
+    .contact {
+        min-height: 35px;
+        padding-top: 5px;
+    }
 }
 
-.coracao {
+.heart {
     color: $colorHeart;
     font-size: 20px;
 }
@@ -244,5 +249,51 @@ strong {
 }
 
 .fa {
-    font-size: 50px;
+    font-size: 28px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+@media screen and (min-width: 769px) {
+    .fa {
+        margin-left: 55px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fa {
+        margin-left: 32px;
+    }
+}
+
+h2 {
+    color: #636161;
+    font-family: Consolas, Monaco, monospace;
+    font-weight: bold;
+    border-right: .1em solid;
+    white-space: nowrap;
+    overflow: hidden;
+    -moz-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+    -o-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+    -webkit-animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+    animation: cursor .5s step-end infinite alternate, typingRocks 5s steps(25) forwards;
+}
+
+.fa-linkedin-square:hover {
+    color: #1c87bd;
+}
+
+.fa-facebook-official:hover {
+    color: #44609d;
+}
+
+.fa-github:hover {
+    color: #adabab;
+}
+
+.fa-medium:hover {
+    color: #00AB82;
 }

@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         cssmin: {
             sitecss: {
                 files: {
-                    'css/folha-estilo.min.css': ['css/folha-estilo.css', 'css/devicon.min.css']
+                    'css/folha-estilo.min.css': ['css/folha-estilo.css']
                 }
             }
         }
